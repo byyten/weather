@@ -18,3 +18,11 @@ table {
 td.value {
     text-align: right;
 }
+
+button {
+    color: white;
+    background-color: darkgreen;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 3px;
+}

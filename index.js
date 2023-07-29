@@ -117,6 +117,7 @@ function getLocation(evt) {
 
 
 setWeatherData = (data) => {
+    tbl_bdy.style.visibility = 'visible'
     tbl_bdy.querySelector('.locName').textContent = `${data.location.name}, ${data.location.country}` 
     tbl_bdy.querySelector('.locLongLat').textContent = `${data.location.lon}, ${data.location.lat}`
     tbl_bdy.querySelector('.locTZ').textContent = `${data.location.tz_id}`
@@ -127,7 +128,7 @@ setWeatherData = (data) => {
     wapi_src = wapi_icon.substring(wapi_icon.indexOf('weather/'))
 
     // tbl_bdy.querySelector('.condition td.icon').appendChild( component('img', 'imgCondition', wapi_src))
-    tbl_bdy.querySelector('.condition td.icon img').src = wapi_src
+    tbl_bdy.querySelector('.condition td.icon img').src = data.current.is_day == 1 ? wapi_src : wapi_src.replace('day', 'night')
     tbl_bdy.querySelector('.condition td.value').textContent = `${data.current.condition.text}`
     tbl_bdy.querySelector('.cloud td.value').textContent = `${data.current.cloud}%`
     tbl_bdy.querySelector('.temperature td.value').textContent = `${data.current.temp_c}C [${data.current.temp_f}F]`
@@ -145,6 +146,7 @@ setWeatherData = (data) => {
 
 tbl = document.querySelector('table.currentWeather')
 tbl_bdy = tbl.querySelector('tbody')
+tbl_bdy.style.visibility = 'hidden'
 // loc = tbl_bdy.querySelector('.loc')
 tr_clone = tbl_bdy.querySelector('.clone')
     tbl_bdy.removeChild(tr_clone) 
