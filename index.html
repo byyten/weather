@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+
+    <!-- <form action="" method="get"> -->
+        <label for="location">Location</label>
+        <input type="text" class="location" value="london" placeholder="type a city name, long,lat or airport code ( eg iata:DBX )" />
+        <button class="getWeather">weather</button>
+    <!-- </form> -->
+
+    <table class="currentWeather">
+        <caption></caption>
+        <tbody>
+            <tr class="loc">
+                <td class="icon"></td>
+                <td class="">Location</td>
+                <td class="value locName"></td>
+            </tr>
+            <tr class="loc">
+                <td class="icon"></td>
+                <td class="">Long/Lat</td>
+                <td class="value locLongLat"></td>
+            </tr>
+            <tr class="loc">
+                <td class="icon"></td>
+                <td class="">Timezone</td>
+                <td class="value locTZ"></td>
+            </tr>
+            <tr class="loc">
+                <td class="icon"></td>
+                <td class=""></td>
+                <td class="value">&nbsp;</td>
+            </tr>
+            <tr class="localTime">
+                <td class="icon"></td>
+                <td class="key">Current time</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="clone">
+                <td class="icon"></td>
+                <td class="key"></td>
+                <td class="value"></td>
+            </tr>
+            <tr class="condition">
+                <td class="icon"><img src="" alt="current weather icon"/></td>
+                <td class="key">currently</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="cloud">
+                <td class="icon material-symbols-outlined">partly_cloudy_day</td>
+                <td class="key">cloud cover</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="temperature">
+                <td class="icon material-symbols-outlined">device_thermostat</td>
+                <td class="key">temperature</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="feelslike">
+                <td class="icon material-symbols-outlined"></td>
+                <td class="key">feels like</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="wind">
+                <td class="icon material-symbols-outlined">air</td>
+                <td class="key">wind</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="rain">
+                <td class="icon material-symbols-outlined">rainy</td>
+                <td class="key">rain</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="pressure">
+                <td class="icon material-symbols-outlined">speed</td>
+                <td class="key">pressure</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="humidity">
+                <td class="icon material-symbols-outlined">water_drop</td>
+                <td class="key">humidity</td>
+                <td class="value"></td>
+            </tr>
+            <tr class="visibility">
+                <td class="icon material-symbols-outlined"></td>
+                <td class="key">visibility</td>
+                <td class="value"></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    
+</body>
+</html>
