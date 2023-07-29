@@ -11,9 +11,24 @@
 <body>
 
     <!-- <form action="" method="get"> -->
-        <label for="location">Location</label>
-        <input type="text" class="location" value="london" placeholder="type a city name, long,lat or airport code ( eg iata:DBX )" />
-        <button class="getWeather">weather</button>
+        <ul>
+            <li>
+                <h1>Check the weather</h1>
+            </li>
+            <li>
+                <label for="location">Location</label>
+                <input type="text" class="location" placeholder="type a city name, a longitude,latitude or an airport code" />
+                <button class="getWeather">weather</button>
+            </li>
+            <li>
+                <p class="guidance">type a city name (e.g new york), a longitude,latitude pair (e.g -10.344,10.345) 
+                    <br>
+                    or an airport code prefixed with 'iata:' (e.g iata:DBX )</p>
+            </li>
+        </div>
+
+        
+        
     <!-- </form> -->
 
     <table class="currentWeather">

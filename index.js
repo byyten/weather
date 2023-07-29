@@ -103,6 +103,10 @@ buildURL = (method, loc) => {
 
 function getLocation(evt) {
     try {
+        if (inputLocation.value == '') {
+            alert('Please enter a valid location')
+            return
+        }
         let qLoc = buildURL('current', inputLocation.value)
         console.log(qLoc)
         fetch(qLoc, {cors: 'no-cors'})
